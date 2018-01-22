@@ -1,0 +1,23 @@
+#ifndef _SHADER_CONSTANTS_
+#define _SHADER_CONSTANTS_
+
+// Attrib location
+#define ATTRIB_LOCATION_POS 0
+#define ATTRIB_LOCATION_TEX 1
+#define ATTRIB_LOCATION_NORM 2
+#define ATTRIB_LOCATION_COLOR 3
+
+// Block indices
+#define UNIFORM_BLOCK_TRANSFORM 0
+#define UNIFORM_BLOCK_COLOR 1
+#define UNIFORM_BLOCK_CAMERA 2
+
+// Texture Indices
+#define UNIFORM_TEXTURE_0 0
+#define UNIFORM_TEXTURE_1 1
+#define UNIFORM_TEXTURE_2 2
+#define UNIFORM_TEXTURE_3 3
+#define UNIFORM_TEXTURE_4 4
+#define UNIFORM_TEXTURE_5 5
+
+#endif
