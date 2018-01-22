@@ -8,6 +8,7 @@
 #include <glm/gtc/matrix_transform.hpp>
 
 
+
 //=====================================================
 // Init render data
 //=====================================================
@@ -16,6 +17,8 @@ void Renderer::Init(Scene* scene, int width, int height)
 	window_width = width;
 	window_height = height;
 	scene_ = scene;
+
+	start_render_time = std::chrono::system_clock::now();
 
 	// Define the viewport dimensions
 	glViewport(0, 0, window_width, window_height);
@@ -68,6 +71,15 @@ void Renderer::Resize(int width, int height)
 	window_width = width;
 }
 
+//======================================================================
+// Get elapsed time since renderer initialization in milliseconds
+//=======================================================================
+int Renderer::GetElapsedTime()
+{
+	auto end = std::chrono::system_clock::now();
+	return std::chrono::duration_cast<std::chrono::milliseconds>(end - start_render_time).count();
+}
+
 //======================================
 // Render scene
 //========================================
@@ -90,8 +102,8 @@ void Renderer::Paint()
 	glBindTextureUnit(UNIFORM_TEXTURE_0, scene_->materials_[test_mesh.material_id].diffuse_map_id);
 
 	glm::mat4 model;
-	//model = glm::rotate(model, glm::radians(static_cast<float>(glfwGetTime()) * -50.0f), glm::vec3(0.5f, 1.0f, 0.0f));
-	glm::translate(model, glm::vec3(0.5f, 1.0f, 0.0f));
+	model = glm::rotate(model, glm::radians(static_cast<float>(GetElapsedTime() * 0.01)), glm::vec3(0.5f, 1.0f, 0.0f));
+	//glm::translate(model, glm::vec3(0.5f, 1.0f, 0.0f));
 	glNamedBufferSubData(transform_ubo, 0, sizeof(glm::mat4), glm::value_ptr(model));
 
 

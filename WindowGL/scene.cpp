@@ -103,7 +103,7 @@ void Scene::Init()
 	glVertexArrayAttribBinding(test_quad.mesh_vao, ATTRIB_LOCATION_TEX, static_cast<GLuint>(BindingPoint::KAttribute_Tex_Coord));
 
 		// load texture
-	Material mat_vin = { "wallpaper.png",{ 0.4f, 0.4f, 0.4f },{ 0.4f, 0.4f, 0.4f },{ 0.4f, 0.4f, 0.4f }, 0.4f, 1 };
+	Material mat_vin = { "vinny.png",{ 0.4f, 0.4f, 0.4f },{ 0.4f, 0.4f, 0.4f },{ 0.4f, 0.4f, 0.4f }, 0.4f, 1 };
 	Material mat_ryan = { "ryan.png",{ 0.3f, 0.3f, 0.3f },{ 0.4f, 0.4f, 0.4f },{ 0.4f, 0.4f, 0.4f }, 0.4f, 1 };
 	Material mat_brad = { "brad.png",{ 0.5f, 0.5f, 0.5f },{ 0.4f, 0.4f, 0.4f },{ 0.4f, 0.4f, 0.4f }, 0.4f, 1 };
 	Material mat_jeff = { "jeff.png",{ 0.4f, 0.4f, 0.4f },{ 0.0f, 0.4f, 0.4f },{ 1.0f, 1.0f, 1.0f }, 0.4f, 1 };

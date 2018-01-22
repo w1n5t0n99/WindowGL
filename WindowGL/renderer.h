@@ -5,6 +5,8 @@
 #include "packed_freelist.h"
 #include "shader_system.h"
 
+#include <chrono>
+#include <cinttypes>
 
 class Renderer
 {
@@ -16,6 +18,8 @@ public:
 	int GetWidth();
 	int GetHeight();
 
+	int GetElapsedTime();
+
 private:
 	gourd::ShaderSystem shader_system_;
 	Scene* scene_;
@@ -25,5 +29,7 @@ private:
 	GLuint transform_ubo;
 	GLuint camera_ubo;
 	const GLuint* scene_shader;
+	
+	std::chrono::time_point<std::chrono::system_clock> start_render_time;
 };
 
