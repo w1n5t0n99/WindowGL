@@ -163,6 +163,7 @@
     <ClInclude Include="simple_window.h" />
     <ClInclude Include="stb_image.h" />
     <ClInclude Include="tiny_obj_loader.h" />
+    <ClInclude Include="wingl.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="NanoLog.cpp" />

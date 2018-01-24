@@ -11,4 +11,7 @@
 void SimpleSetInstance(HINSTANCE hinstance);
 
 std::pair<HWND, HGLRC> SimpleCreateWindow(int width, int height, std::string title);
+
 void SimpleDestroyContext(std::pair<HWND, HGLRC> window);
+
+std::pair<int, int> SimpleGetWindowSize(const HWND& hwnd);

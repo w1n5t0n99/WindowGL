@@ -69,6 +69,12 @@ void Renderer::Resize(int width, int height)
 {
 	window_height = height;
 	window_width = width;
+
+	glViewport(0, 0, window_width, window_height);
+	glm::mat4 projection;
+	projection = glm::perspective(glm::radians(45.0f), static_cast<float>(window_width) / static_cast<float>(window_height), 0.1f, 100.0f);
+	glNamedBufferSubData(camera_ubo, sizeof(glm::mat4), sizeof(glm::mat4), glm::value_ptr(projection));
+
 }
 
 //======================================================================

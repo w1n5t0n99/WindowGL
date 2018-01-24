@@ -262,3 +262,11 @@ void SimpleDestroyContext(std::pair<HWND, HGLRC> window)
 	wglDeleteContext(window.second);
 	PostQuitMessage(0);
 }
+
+std::pair<int, int> SimpleGetWindowSize(const HWND& hwnd)
+{
+	RECT rect{};
+	auto sz = GetWindowRect(hwnd, &rect);
+
+	return { rect.right - rect.left, rect.bottom - rect.top };
+}
