@@ -60,6 +60,13 @@ void Renderer::Init(Scene* scene, int width, int height)
 	glNamedBufferSubData(camera_ubo, 0, sizeof(glm::mat4), glm::value_ptr(view));
 	glNamedBufferSubData(camera_ubo, sizeof(glm::mat4), sizeof(glm::mat4), glm::value_ptr(projection));
 
+	//@fix - deprecated, add to shaders
+	glEnable(GL_BLEND);
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
+	glEnable(GL_DEPTH_TEST); // enable depth-testing
+	glDepthFunc(GL_LEQUAL);
+
 }
 
 //=================================================================
@@ -91,11 +98,6 @@ int Renderer::GetElapsedTime()
 //========================================
 void Renderer::Paint()
 {
-	glEnable(GL_BLEND);
-	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-
-	glEnable(GL_DEPTH_TEST); // enable depth-testing
-	glDepthFunc(GL_LESS);
 
 	// Clear the colorbuffer
 	glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
@@ -107,6 +109,7 @@ void Renderer::Paint()
 
 	glBindTextureUnit(UNIFORM_TEXTURE_0, scene_->materials_[test_mesh.material_id].diffuse_map_id);
 
+	//@fix - models are transparent, need to implement sorting
 	glm::mat4 model;
 	model = glm::rotate(model, glm::radians(static_cast<float>(GetElapsedTime() * 0.01)), glm::vec3(0.5f, 1.0f, 0.0f));
 	//glm::translate(model, glm::vec3(0.5f, 1.0f, 0.0f));

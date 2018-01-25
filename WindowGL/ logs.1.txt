@@ -1,5 +1,5 @@
-[1970-01-06 23:53:22.898551][INFO][1800][c:\users\reede\documents\projects\windowgl\windowgl\simple_window.cpp:SimpleCreateWindow:173] choose main PIXELFORMAT succeeded
-[1970-01-06 23:53:22.898686][INFO][1800][c:\users\reede\documents\projects\windowgl\windowgl\simple_window.cpp:SimpleCreateWindow:197] main PIXELFORMAT creation succeeded
-[1970-01-06 23:53:22.899067][INFO][1800][c:\users\reede\documents\projects\windowgl\windowgl\simple_window.cpp:SimpleCreateWindow:226] creating main HGLRC context succeeded
-[1970-01-06 23:53:22.900592][INFO][1800][c:\users\reede\documents\projects\windowgl\windowgl\simple_window.cpp:SimpleCreateWindow:232] making main HGLRC current context succeeded
-[1970-01-06 23:53:22.903681][INFO][1800][c:\users\reede\documents\projects\windowgl\windowgl\simple_window.cpp:SimpleCreateWindow:252] Version: 4.5.0 NVIDIA 388.13 VENDOR: NVIDIA Corporation
+[1970-01-07 22:19:37.023578][INFO][10548][c:\users\reede\documents\projects\windowgl\windowgl\simple_window.cpp:SimpleCreateWindow:173] choose main PIXELFORMAT succeeded
+[1970-01-07 22:19:37.023750][INFO][10548][c:\users\reede\documents\projects\windowgl\windowgl\simple_window.cpp:SimpleCreateWindow:197] main PIXELFORMAT creation succeeded
+[1970-01-07 22:19:37.024135][INFO][10548][c:\users\reede\documents\projects\windowgl\windowgl\simple_window.cpp:SimpleCreateWindow:226] creating main HGLRC context succeeded
+[1970-01-07 22:19:37.025370][INFO][10548][c:\users\reede\documents\projects\windowgl\windowgl\simple_window.cpp:SimpleCreateWindow:232] making main HGLRC current context succeeded
+[1970-01-07 22:19:37.029581][INFO][10548][c:\users\reede\documents\projects\windowgl\windowgl\simple_window.cpp:SimpleCreateWindow:252] Version: 4.5.0 NVIDIA 388.13 VENDOR: NVIDIA Corporation

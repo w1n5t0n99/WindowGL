@@ -168,7 +168,7 @@ void Scene::Init()
 		(*it).diffuse_map_id = tex_id;
 	}
 	
-	test_mesh_ = v_mesh_id;
+	test_mesh_ = r_mesh_id;
 
 	// load transforms
 	Transform t_vin, t_ryan, t_brad, t_jeff, t_drew, t_alex;
