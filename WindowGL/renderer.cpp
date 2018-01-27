@@ -60,7 +60,6 @@ void Renderer::Init(Scene* scene, int width, int height)
 	glNamedBufferSubData(camera_ubo, 0, sizeof(glm::mat4), glm::value_ptr(view));
 	glNamedBufferSubData(camera_ubo, sizeof(glm::mat4), sizeof(glm::mat4), glm::value_ptr(projection));
 
-	//@fix - deprecated, add to shaders
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
